@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: linear-gradient(#b3b3b3 2.2px, transparent 2.2px), linear-gradient(90deg, #b3b3b3 2.2px, transparent 2.2px),
+    linear-gradient(#b3b3b3 1.1px, transparent 1.1px), linear-gradient(90deg, #b3b3b3 1.1px, #e5e5f7 1.1px);
+  background-size: 55px 55px, 55px 55px, 11px 11px, 11px 11px;
+  background-position: -2.2px -2.2px, -2.2px -2.2px, -1.1px -1.1px, -1.1px -1.1px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.calculator-grid {
+  background-color: #afafaf;
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #000000;
+  margin: -225px 0 0 -150px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 75px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #4e4c4a;
+  outline: none;
+  background-color: rgb(224, 224, 224);
+  height: 100%;
+  width: 100%;
+}
+
+.calculator-grid > button:hover {
+  background-color: #a9a9a9;
+}
+
+.AC {
+  grid-column: span 2;
+  color: #e0e0e0;
+  background-color: #c75e51 !important;
+}
+
+.AC:hover {
+  color: #e0e0e0;
+  background-color: #aa5044 !important;
+}
+
+.C {
+  color: #e0e0e0;
+  background-color: #c75e51 !important;
+}
+
+.C:hover {
+  color: #e0e0e0;
+  background-color: #aa5044 !important;
+}
+
+.EQUAL {
+  grid-column: span 2;
+  color: #e0e0e0;
+  background-color: #66d16b !important;
+}
+
+.EQUAL:hover {
+  color: #e0e0e0;
+  background-color: #52a356 !important;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(52, 80, 46, 0.75);
+  border: 1px solid #000000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 100%;
+  width: 100%;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
