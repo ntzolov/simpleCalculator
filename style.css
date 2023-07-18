@@ -45,7 +45,8 @@ body {
   width: 100%;
 }
 
-.calculator-grid > button:hover {
+.calculator-grid > button:hover,
+.calculator-grid > button:active {
   background-color: #a9a9a9;
 }
 
