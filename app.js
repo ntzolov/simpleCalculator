@@ -48,6 +48,9 @@ class Calculator {
       case '÷':
         computation = prev / current;
         break;
+      case '/':
+        computation = prev / current;
+        break;
       default:
         return;
     }
@@ -66,7 +69,7 @@ class Calculator {
     } else {
       integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 });
     }
-    if (decimalDigits != null) {
+    if (decimalDigits != undefined) {
       return `${integerDisplay}.${decimalDigits}`;
     } else {
       return integerDisplay;
@@ -75,7 +78,7 @@ class Calculator {
 
   updateDisplay() {
     this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
-    if (this.operation != null) {
+    if (this.operation != undefined) {
       this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`;
     } else {
       this.previousOperandTextElement.innerText = '';
