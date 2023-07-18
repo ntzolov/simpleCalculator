@@ -45,31 +45,15 @@ body {
   width: 100%;
 }
 
-@media (hover: hover) {
-  .calculator-grid > button:hover {
-    background-color: #a9a9a9;
-  }
-}
-
 .AC {
   grid-column: span 2;
   color: #e0e0e0;
   background-color: #c75e51 !important;
 }
 
-.AC:hover {
-  color: #e0e0e0;
-  background-color: #aa5044 !important;
-}
-
 .C {
   color: #e0e0e0;
   background-color: #c75e51 !important;
-}
-
-.C:hover {
-  color: #e0e0e0;
-  background-color: #aa5044 !important;
 }
 
 .EQUAL {
@@ -78,9 +62,25 @@ body {
   background-color: #66d16b !important;
 }
 
-.EQUAL:hover {
-  color: #e0e0e0;
-  background-color: #52a356 !important;
+@media (hover: hover) {
+  .calculator-grid > button:hover {
+    background-color: #a9a9a9;
+  }
+
+  .AC:hover {
+    color: #e0e0e0;
+    background-color: #aa5044 !important;
+  }
+
+  .C:hover {
+    color: #e0e0e0;
+    background-color: #aa5044 !important;
+  }
+
+  .EQUAL:hover {
+    color: #e0e0e0;
+    background-color: #52a356 !important;
+  }
 }
 
 .output {
